@@ -1,6 +1,0 @@
-package com.alimuzaffar.tutorial.gestures01;
-
-public class CustomGestureDetector implements GestureDetector.OnGestureListener,
-GestureDetector.OnDoubleTapListener{
-
-}

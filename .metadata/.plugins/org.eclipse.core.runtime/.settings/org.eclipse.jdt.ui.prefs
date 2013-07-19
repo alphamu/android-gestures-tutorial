@@ -1,3 +1,4 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="android.support.v4.view.GestureDetectorCompat"><rhs name\="android.support.v4.view.GestureDetectorCompat"/></lhs><lhs name\="android.view.GestureDetector$OnGestureListener"><rhs name\="com.alimuzaffar.tutorial.gestures01.CustomOnGestureListener"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs></history>
 content_assist_number_of_computers=12
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
