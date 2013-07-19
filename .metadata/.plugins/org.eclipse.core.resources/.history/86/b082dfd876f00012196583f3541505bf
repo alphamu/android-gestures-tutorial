@@ -1,0 +1,88 @@
+package com.alimuzaffar.tutorial.gestures01;
+
+import android.text.Editable;
+import android.view.GestureDetector.OnDoubleTapListener;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class CustomOnGestureListener implements OnGestureListener,
+		OnDoubleTapListener {
+
+	public final String TAG = CustomOnGestureListener.class.getName();
+	
+	EditText mGestureName;
+	
+	public CustomOnGestureListener(TextView gestureName) {
+		mGestureName = (EditText) gestureName;
+	}
+
+	@Override
+	public boolean onDoubleTap(MotionEvent e) {
+		mGestureName.setText(TAG + ".onDoubleTap()");
+		
+		return true;
+	}
+
+	@Override
+	public boolean onDoubleTapEvent(MotionEvent e) {
+		mGestureName.setText(TAG + ".onDoubleTapEvent()");
+		
+		return true;
+	}
+
+	@Override
+	public boolean onSingleTapConfirmed(MotionEvent e) {
+		mGestureName.setText(TAG + ".onSingleTapConfirmed()");
+		
+		return true;
+	}
+
+	@Override
+	public boolean onDown(MotionEvent e) {
+		mGestureName.setText(TAG + ".onDown()");
+		return true;
+	}
+
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+			float velocityY) {
+		mGestureName.setText(TAG + ".onFling()");
+		return true;
+	}
+
+	@Override
+	public void onLongPress(MotionEvent e) {
+		mGestureName.setText(TAG + ".onLongPress()");
+
+	}
+
+	@Override
+	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
+			float distanceY) {
+		mGestureName.setText(TAG + ".onScroll()");
+		return true;
+	}
+
+	@Override
+	public void onShowPress(MotionEvent e) {
+		mGestureName.setText(TAG + ".onShowPress()");
+
+	}
+
+	@Override
+	public boolean onSingleTapUp(MotionEvent e) {
+		mGestureName.setText(TAG + ".onSingleTapUp()");
+		return true;
+	}
+
+	private prepend(String method, String text) {
+		Editable e = mGestureName.getText();
+		e.append('\n');
+		e.append(TAG);
+		e.append('.');
+		e.append(method);
+		mGestureName.setText(e);
+	}
+}

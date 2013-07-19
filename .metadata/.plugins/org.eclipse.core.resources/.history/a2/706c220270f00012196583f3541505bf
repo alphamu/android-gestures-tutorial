@@ -1,0 +1,5 @@
+package com.alimuzaffar.tutorial.gestures01;
+
+public class CustomGestureDetector  {
+
+}
