@@ -43,60 +43,62 @@ public class MainActivity extends Activity implements OnGestureListener,
 
 	@Override
 	public boolean onDoubleTap(MotionEvent e) {
-		prepend("onDoubleTap()");
+		prepend("onDoubleTap() ptrs:" + e.getPointerCount());
 
 		return true;
 	}
 
 	@Override
 	public boolean onDoubleTapEvent(MotionEvent e) {
-		prepend("onDoubleTapEvent()");
+		prepend("onDoubleTapEvent() ptrs:" + e.getPointerCount());
 
 		return true;
 	}
 
 	@Override
 	public boolean onSingleTapConfirmed(MotionEvent e) {
-		prepend("onSingleTapConfirmed()");
+		prepend("onSingleTapConfirmed() ptrs:" + e.getPointerCount());
 
 		return true;
 	}
 
 	@Override
 	public boolean onDown(MotionEvent e) {
-		prepend("onDown()");
+		prepend("onDown() ptrs:" + e.getPointerCount());
 		return true;
 	}
 
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
-		prepend("onFling()");
+		prepend("onFling() ptrs:e1:" + e1.getPointerCount() + " e2:" + e2.getPointerCount());
 		return true;
 	}
 
 	@Override
 	public void onLongPress(MotionEvent e) {
-		prepend("onLongPress()");
+		prepend("onLongPress() ptrs:" + e.getPointerCount());
 
 	}
 
 	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
-		prepend("onScroll()");
+		//e1 The first down motion event that started the scrolling.
+		//e2 The move motion event that triggered the current onScroll.
+		prepend("onScroll() ptrs:e1:" + e1.getPointerCount() + " e2:" + e2.getPointerCount());
 		return true;
 	}
 
 	@Override
 	public void onShowPress(MotionEvent e) {
-		prepend("onShowPress()");
+		prepend("onShowPress() ptrs:" + e.getPointerCount());
 
 	}
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent e) {
-		prepend("onSingleTapUp()");
+		prepend("onSingleTapUp() ptrs:" + e.getPointerCount());
 		return true;
 	}
 
