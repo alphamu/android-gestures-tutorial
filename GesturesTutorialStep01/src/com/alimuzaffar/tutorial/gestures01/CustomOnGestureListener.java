@@ -16,7 +16,7 @@ public class CustomOnGestureListener implements OnGestureListener,
 	public CustomOnGestureListener(TextView gestureName) {
 		mGestureName = (EditText) gestureName;
 	}
-
+	
 	@Override
 	public boolean onDoubleTap(MotionEvent e) {
 		prepend("onDoubleTap() ptrs:" + e.getPointerCount());

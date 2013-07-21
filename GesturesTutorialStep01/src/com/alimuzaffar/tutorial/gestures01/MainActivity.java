@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends Activity {
 
 	private GestureDetector mGestureDetector;
-	private View.OnTouchListener mGestureListener;
+	private View.OnTouchListener mViewTouchListener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,11 @@ public class MainActivity extends Activity {
 		//NOTE: If you pass an activity to the gesture detector.
 		//and you support orientation changes. You need to 
 		//destroy the gesture detector and recreate it.
-		CustomOnGestureListener l = new CustomOnGestureListener(gestureName);
-		mGestureDetector = new GestureDetector(this, l);
-		mGestureDetector.setOnDoubleTapListener(l);
+		CustomOnGestureListener gestureListener = new CustomOnGestureListener(gestureName);
+		mGestureDetector = new GestureDetector(this, gestureListener);
+		mGestureDetector.setOnDoubleTapListener(gestureListener);
 		
-		mGestureListener = new View.OnTouchListener() {
+		mViewTouchListener = new View.OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (mGestureDetector.onTouchEvent(event)) {
 					return true;
@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 		};
 		
 		
-		gestureView.setOnTouchListener(mGestureListener);
+		gestureView.setOnTouchListener(mViewTouchListener);
 	}
 
 	@Override
