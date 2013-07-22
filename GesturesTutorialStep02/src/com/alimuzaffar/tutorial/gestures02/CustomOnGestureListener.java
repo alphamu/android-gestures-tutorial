@@ -2,7 +2,6 @@ package com.alimuzaffar.tutorial.gestures02;
 
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.MotionEventCompat;
 import android.view.GestureDetector.OnDoubleTapListener;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -21,12 +20,7 @@ public class CustomOnGestureListener implements OnGestureListener,
 
 	EditText mGestureName;
 
-	private boolean mStillDown;
-
 	private MotionEvent mCurrentDownEvent;
-	private MotionEvent mPreviousUpEvent;
-
-	private int mCurrentTapType;
 
 	private class GestureHandler extends Handler {
 		GestureHandler() {
@@ -183,8 +177,6 @@ public class CustomOnGestureListener implements OnGestureListener,
 
 		s.insert(0, '\n');
 		s.insert(0, method);
-		// s.insert(0, '.');
-		// s.insert(0, TAG);
 		mGestureName.setText(s);
 	}
 
