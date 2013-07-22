@@ -78,8 +78,6 @@ public class CustomOnGestureListener implements OnGestureListener,
 			break;
 			
 		case MotionEvent.ACTION_UP:
-//			if(mHandler.hasMessages(TAP))
-//				return true;
 			break;
 			
 		}
@@ -161,6 +159,10 @@ public class CustomOnGestureListener implements OnGestureListener,
 		// e2 The move motion event that triggered the current onScroll.
 		prepend("onScroll() ptrs:e1:" + e1.getPointerCount() + " e2:"
 				+ e2.getPointerCount());
+		
+		cancelAll();
+		
+		
 		return true;
 	}
 
