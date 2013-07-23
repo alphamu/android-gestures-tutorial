@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 		//NOTE: If you pass an activity to the gesture detector.
 		//and you support orientation changes. You need to 
 		//destroy the gesture detector and recreate it.
-		CustomOnGestureListener gestureListener = new CustomOnGestureListener(gestureName);
+		CustomOnGestureListener gestureListener = new CustomOnGestureListener(this, gestureName);
 		mGestureDetector = new CustomGestureDetector(this, gestureListener);
 		mGestureDetector.setOnDoubleTapListener(gestureListener);
 		
