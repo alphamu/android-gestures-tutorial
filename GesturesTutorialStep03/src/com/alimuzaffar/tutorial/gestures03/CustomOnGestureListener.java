@@ -3,7 +3,6 @@ package com.alimuzaffar.tutorial.gestures03;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.util.FloatMath;
 import android.view.GestureDetector.OnDoubleTapListener;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -24,10 +23,7 @@ public class CustomOnGestureListener implements OnGestureListener,
 	public static float mViewScaledTouchSlop;
 	EditText mGestureName;
 
-	private boolean mStillDown;
-
 	private MotionEvent mCurrentDownEvent;
-	private MotionEvent mPreviousUpEvent;
 
 	private int mPtrCount = 0;
 

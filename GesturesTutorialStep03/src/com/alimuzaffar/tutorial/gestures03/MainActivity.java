@@ -1,10 +1,7 @@
 package com.alimuzaffar.tutorial.gestures03;
 
-import com.alimuzaffar.tutorial.gestures03.R;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
